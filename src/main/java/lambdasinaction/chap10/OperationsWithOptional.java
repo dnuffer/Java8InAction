@@ -12,10 +12,10 @@ public class OperationsWithOptional {
         System.out.println(max(empty(), of(5)));
 
         Optional<Integer> opt1 = of(5);
-        Optional<Integer> opt2 = opt1.or(() -> of(4));
+        Optional<Integer> opt2 = of(opt1.orElse(4));
 
         System.out.println(
-        of(5).or(() -> of(4))
+        of(5).orElse(4)
                           );
     }
 
